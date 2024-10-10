@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/update" method="post">
+
+      
+        <input type="text"  name="id" hidden value="<%=singleData.id%>" >
+         <input type="text"  placeholder="Enter name" name="name" value="<%=singleData.name%>" > <br> <br> <br>
+        
+         <input type="text"  placeholder="Enter subject" name="subject"value="<%=singleData.subject%>" > <br> <br> <br>
+    
+         
+         <input type="text"  placeholder="Enter city" name="city"value="<%=singleData.city%>" > <br> <br> <br>
+    
+         <button type="submit">update</button>
+        </form> <br> <br> <br>
+</body>
+</html>

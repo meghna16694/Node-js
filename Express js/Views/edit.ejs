@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        text-align: center;
+        align-items: center;
+    }
+    .container{
+        width: 40%;
+        height: 300px;
+        background-color: grey;
+        margin-left: 30%;
+    }
+    label{
+        font-size: 20px;
+        color: white;
+        
+    }
+    input{
+        width: 200px;
+        height: 20px;
+    }
+    #bt{
+        background-color: green;
+        width: 100px;
+        height: 30px;
+        font-size: 20px;
+    }
+    #heading{
+        background-color: rgb(226, 116, 116);
+    }
+
+</style>
+<body>
+    <div class="container">
+    <form action="/update" method="post">
+        <h1 id="heading">Enter details you want to Edit</h1>
+
+        <input type="text" hidden name="id"  value="<%=singleData.id%>"> <br> <br>
+        <label for="">Name :</label>
+        <input type="text" placeholder="name" name="name" value="<%=singleData.name%>"> <br> <br> 
+         <label for="">Subject : </label>
+        <input type="text" placeholder="subject" name="subject"  value="<%=singleData.subject%>"> <br> <br> 
+        <label for="">City :  </label>
+        <input type="text" placeholder="city" name="city"  value="<%=singleData.city%>"> <br> <br> 
+
+        <button type="submit" id="bt">Update</button>
+
+    </form>
+</div>
+</body>
+</html>
