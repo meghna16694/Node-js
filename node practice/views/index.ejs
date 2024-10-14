@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="/public/style.css">
 </head>
 <body>
     <h1>Form</h1>
@@ -19,6 +20,9 @@
      <label for="">City : </label>
      <input type="text"  placeholder="Enter city" name="city" > <br> <br> <br>
 
+     <label for="">age : </label>
+     <input type="text"  placeholder="Enter age" name="age" > <br> <br> <br>
+
      <button type="submit">Click</button>
     </form> <br> <br> <br>
 
@@ -29,7 +33,9 @@
                 <th>name</th>
                 <th>subject</th>
                 <th>city</th>
-                <th>Action</th>
+                <th>age</th>
+                <th colspan="2">Action</th>
+                
             </tr>
         </thead>
 
@@ -50,6 +56,10 @@
 
                 <td>
                     <%= e.city %>
+                </td>
+
+                <td>
+                    <%= e.age %>
                 </td>
 
                 <td>
