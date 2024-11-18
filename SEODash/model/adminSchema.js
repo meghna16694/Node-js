@@ -22,8 +22,13 @@ const Schema = mongoose.Schema({
         required: true 
     }, 
     notes:{ 
-        type: String
-    } 
+        type: String,
+        required:true
+    },
+    userid:{
+        type:String,
+        required:true
+    }
 
 
 

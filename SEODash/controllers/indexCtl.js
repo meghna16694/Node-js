@@ -49,6 +49,7 @@ module.exports.addAdmin = (req,res)=>{
 }
 
 module.exports.addAdminData = async(req,res) =>{
+    req.body.userid = req.cookies.userData._id
     let data = await adminSchema.create(req.body)
     data && res.redirect("/addAdmin")
     console.log(req.body)
@@ -59,7 +60,8 @@ module.exports.addAdminData = async(req,res) =>{
 module.exports.viewAdmin = async(req,res) =>{
     if(req.cookies.userData){
         let data = await adminSchema.find({})
-        data &&  res.render("viewAdmin",{data})
+        let UID = data.filter(item => item.userid == req.cookies.userData._id)
+        data &&  res.render("viewAdmin",{UID})
     }else{
         res.redirect("/")
     }
